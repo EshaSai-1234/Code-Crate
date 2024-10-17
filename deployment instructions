@@ -1,0 +1,13 @@
+#Deployment Instructions: Google Cloud Platform
+   # Deployment on Google Cloud Platform (GCP)
+ 1. Create a new project on GCP and enable Cloud Run and Firestore.
+ 2. Install Google Cloud SDK: https://cloud.google.com/sdk/docs/install
+ 3. Authenticate with your GCP account: `gcloud auth login`
+ 4. Deploy the backend to Cloud Run:
+   ```
+   gcloud run deploy codecrate-backend --source . --platform managed --region
+ us-central1
+   ```
+ 5. Set up MongoDB Atlas and configure it to connect with your backend.
+ 6. Store Firebase API keys and MongoDB URI as environment variables in Cloud Run.
+ 7. Ensure the frontend communicates properly with the backend API
